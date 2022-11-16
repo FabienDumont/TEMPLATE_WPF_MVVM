@@ -1,0 +1,16 @@
+﻿<Application x:Class="TEMPLATE_WPF_MVVM.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Application.Resources>
+         <ResourceDictionary>
+             <ResourceDictionary.MergedDictionaries>
+                 <ResourceDictionary Source="Theme/ButtonTheme.xaml"/>
+                 <ResourceDictionary Source="Theme/TextBoxTheme.xaml"/>
+                 <ResourceDictionary Source="Theme/TextBlockTheme.xaml"/>
+                 <ResourceDictionary Source="Theme/ComboBoxTheme.xaml"/>
+                 <ResourceDictionary Source="Theme/RadioButtonTheme.xaml"/>
+                 <ResourceDictionary Source="Theme/CheckBoxTheme.xaml"/>
+             </ResourceDictionary.MergedDictionaries>
+         </ResourceDictionary>
+    </Application.Resources>
+</Application>

@@ -1,0 +1,30 @@
+﻿<UserControl x:Class="TEMPLATE_WPF_MVVM.Core.Components.NavigationBar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:TEMPLATE_WPF_MVVM.Core.Components"
+             mc:Ignorable="d"
+             Background="#1f1f2e"
+             d:DesignWidth="400">
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0" 
+                    Orientation="Horizontal" >
+            <Button Content="Ouvrir fenêtre secondaire"
+                    Style="{StaticResource ButtonTheme}"
+                    Command="{Binding OpenSecondViewCommand}"/>
+        </StackPanel>
+        <StackPanel Grid.Column="1" 
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Right">
+            <Button Content="x"
+                    Style="{StaticResource ButtonTheme}"
+                    Command="{Binding CloseCommand}"
+                    CommandParameter="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Window}}}"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

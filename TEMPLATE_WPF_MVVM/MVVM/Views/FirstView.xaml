@@ -1,0 +1,16 @@
+<UserControl x:Class="TEMPLATE_WPF_MVVM.MVVM.Views.FirstView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:TEMPLATE_WPF_MVVM.MVVM.Views"
+             Background="Transparent"
+             mc:Ignorable="d">
+    <Grid>
+        <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock Text="Premier écran"
+                       HorizontalAlignment="Center"
+                       Style="{StaticResource TextBlockTheme}" />
+        </StackPanel>
+    </Grid>
+</UserControl>
