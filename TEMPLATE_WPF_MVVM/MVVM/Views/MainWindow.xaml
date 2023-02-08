@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:TEMPLATE_WPF_MVVM.MVVM.Views"
         xmlns:viewmodels="clr-namespace:TEMPLATE_WPF_MVVM.MVVM.ViewModels"
         xmlns:components="clr-namespace:TEMPLATE_WPF_MVVM.Core.Components"
-        xmlns:custom="clr-namespace:CustomControlLibrary;assembly=CustomControlLibrary"
+        xmlns:contentControls="clr-namespace:MVVMEssentials.ContentControls;assembly=MVVMEssentials"
         mc:Ignorable="d"
         Background="#3e3e5b"
         Title="Template WPF MVVM" Height="450" Width="800">
@@ -23,9 +23,9 @@
             </DataTemplate>
         </Grid.Resources>
         
-        <custom:Modal Panel.ZIndex="1" IsOpen="{Binding IsOpen}">
+        <contentControls:Modal Panel.ZIndex="1" IsOpen="{Binding IsOpen}">
             <ContentControl Content="{Binding CurrentModalViewModel}" />
-        </custom:Modal>
+        </contentControls:Modal>
         
         <ContentControl Content="{Binding CurrentViewModel}"/>
     </Grid>

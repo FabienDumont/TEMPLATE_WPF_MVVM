@@ -1,4 +1,7 @@
 ﻿using System;
+using MVVMEssentials.Services;
+using MVVMEssentials.Stores;
+using MVVMEssentials.ViewModels;
 using TEMPLATE_WPF_MVVM.Core.Stores;
 using TEMPLATE_WPF_MVVM.MVVM.ViewModels;
 

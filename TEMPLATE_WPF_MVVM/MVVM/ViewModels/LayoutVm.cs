@@ -1,4 +1,6 @@
-﻿namespace TEMPLATE_WPF_MVVM.MVVM.ViewModels;
+﻿using MVVMEssentials.ViewModels;
+
+namespace TEMPLATE_WPF_MVVM.MVVM.ViewModels;
 
 public class LayoutVm : BaseVm {
     public NavigationBarVm NavigationBarVm { get; }
