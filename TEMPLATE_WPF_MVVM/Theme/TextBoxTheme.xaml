@@ -4,52 +4,63 @@
     <Style TargetType="{x:Type TextBox}"
            BasedOn="{StaticResource {x:Type TextBox}}"
            x:Key="TextBoxTheme">
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="{x:Type TextBox}">
-                    <Border CornerRadius="10"
-                            Background="#293456">
+        <Style.Setters>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TextBox}">
+                        <Border CornerRadius="10"
+                                Background="#293456">
 
-                        <Grid>
-                            <Rectangle StrokeThickness="1" />
-                            <TextBox Text="{Binding Text, RelativeSource={RelativeSource TemplatedParent}, UpdateSourceTrigger=PropertyChanged}"
-                                     BorderThickness="0"
-                                     Background="Transparent"
-                                     VerticalContentAlignment="Center"
-                                     Margin="10,0,0,0"
-                                     Foreground="#CFCFCF"
-                                     CaretBrush="#CFCFCF"
-                                     x:Name="InputBox" />
+                            <Grid>
+                                <Rectangle StrokeThickness="1" />
+                                <TextBox
+                                    Text="{Binding Text, RelativeSource={RelativeSource TemplatedParent}, UpdateSourceTrigger=PropertyChanged}"
+                                    BorderThickness="0"
+                                    Background="Transparent"
+                                    VerticalContentAlignment="Center"
+                                    Margin="10,0,0,0"
+                                    FontWeight="Light"
+                                    FontFamily="Century Gothic"
+                                    Foreground="#CFCFCF"
+                                    CaretBrush="#CFCFCF"
+                                    x:Name="InputBox" />
 
-                            <TextBlock IsHitTestVisible="False"
-                                       Text="{TemplateBinding Tag}"
-                                       Margin="10,0,0,0"
-                                       VerticalAlignment="Center"
-                                       HorizontalAlignment="Left"
-                                       Foreground="DarkGray"
-                                       Grid.Column="1">
+                                <TextBlock IsHitTestVisible="False"
+                                           Text="{TemplateBinding Tag}"
+                                           Margin="10,0,0,0"
+                                           VerticalAlignment="Center"
+                                           HorizontalAlignment="Left"
+                                           FontWeight="Light"
+                                           FontFamily="Century Gothic"
+                                           Foreground="DarkGray">
 
-                                <TextBlock.Style>
-                                    <Style TargetType="{x:Type TextBlock}">
-                                        <Style.Triggers>
-                                            <DataTrigger Binding="{Binding Text, ElementName=InputBox}"
-                                                         Value="">
-                                                <Setter Property="Visibility"
-                                                        Value="Visible" />
-                                            </DataTrigger>
-                                        </Style.Triggers>
-                                        <Setter Property="Visibility"
-                                                Value="Hidden" />
-                                    </Style>
-                                </TextBlock.Style>
+                                    <TextBlock.Style>
+                                        <Style TargetType="{x:Type TextBlock}">
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding Text, ElementName=InputBox}"
+                                                             Value="">
+                                                    <Setter Property="Visibility"
+                                                            Value="Visible" />
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                            <Setter Property="Visibility"
+                                                    Value="Hidden" />
+                                        </Style>
+                                    </TextBlock.Style>
 
-                            </TextBlock>
-                        </Grid>
+                                </TextBlock>
+                            </Grid>
 
-                    </Border>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+
+            <Setter Property="Height"
+                    Value="25" />
+            <Setter Property="Width"
+                    Value="120" />
+        </Style.Setters>
     </Style>
 
 </ResourceDictionary>

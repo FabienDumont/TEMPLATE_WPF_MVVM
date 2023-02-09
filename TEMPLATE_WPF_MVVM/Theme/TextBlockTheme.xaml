@@ -14,7 +14,7 @@
             <Setter Property="FontWeight"
                     Value="Light" />
             <Setter Property="FontFamily"
-                    Value="Helvetica" />
+                    Value="Century Gothic" />
 
         </Style.Setters>
     </Style>

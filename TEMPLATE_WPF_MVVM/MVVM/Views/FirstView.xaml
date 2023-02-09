@@ -6,11 +6,15 @@
              xmlns:local="clr-namespace:TEMPLATE_WPF_MVVM.MVVM.Views"
              Background="Transparent"
              mc:Ignorable="d">
-    <Grid>
-        <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
-            <TextBlock Text="Premier écran"
-                       HorizontalAlignment="Center"
-                       Style="{StaticResource TextBlockTheme}" />
-        </StackPanel>
-    </Grid>
+    <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
+        <TextBlock Text="Premier écran"
+                   HorizontalAlignment="Center"
+                   Style="{StaticResource TextBlockTheme}" />
+            
+        <Button Content="Ouvrir pop up"
+                Width="Auto"
+                Margin="0 20 0 0"
+                Style="{StaticResource ButtonTheme}"
+                Command="{Binding OpenModalCommand}"/>
+    </StackPanel>
 </UserControl>

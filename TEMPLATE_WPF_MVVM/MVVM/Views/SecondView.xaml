@@ -4,22 +4,11 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:TEMPLATE_WPF_MVVM.MVVM.Views"
-             mc:Ignorable="d">
-    <Border Background="#535359">
-        <Grid>
-            <StackPanel Margin="10"
-                        Orientation="Vertical" 
-                        VerticalAlignment="Center" 
-                        HorizontalAlignment="Center">
-                <TextBlock Text="Second écran"
-                           HorizontalAlignment="Center"
-                           Style="{StaticResource TextBlockTheme}"/>
-                <Button Margin="0,10,0,0"
-                        Content="Retour"
-                        Width="100"
-                        Command="{Binding ReturnCommand}"
-                        Style="{StaticResource ButtonTheme}"/>
-            </StackPanel>
-        </Grid>
-    </Border>
+             mc:Ignorable="d"
+             d:DesignHeight="300" d:DesignWidth="300">
+    <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
+        <TextBlock Text="Second écran"
+                   HorizontalAlignment="Center"
+                   Style="{StaticResource TextBlockTheme}" />
+    </StackPanel>
 </UserControl>

@@ -7,24 +7,21 @@
              mc:Ignorable="d"
              Background="#1f1f2e"
              d:DesignWidth="400">
-    <Grid Margin="10">
+    <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="10*"/>
-            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <StackPanel Grid.Column="0" 
-                    Orientation="Horizontal" >
-            <Button Content="Ouvrir fenêtre secondaire"
-                    Style="{StaticResource ButtonTheme}"
-                    Command="{Binding OpenSecondViewCommand}"/>
-        </StackPanel>
-        <StackPanel Grid.Column="1" 
-                    VerticalAlignment="Center"
-                    HorizontalAlignment="Right">
-            <Button Content="x"
-                    Style="{StaticResource ButtonTheme}"
-                    Command="{Binding CloseCommand}"
-                    CommandParameter="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Window}}}"/>
-        </StackPanel>
+        <RadioButton Grid.Column="0"
+                     Content="Premier écran"
+                     Background="#34344c"
+                     IsChecked="True"
+                     Style="{StaticResource MenuRadioButtonTheme}"
+                     Command="{Binding FirstNavigateCommand}"/>
+        <RadioButton Grid.Column="1"
+                     Content="Second écran"
+                     Background="#34344c"
+                     Style="{StaticResource MenuRadioButtonTheme}"
+                     Command="{Binding SecondNavigateCommand}"/>
     </Grid>
 </UserControl>

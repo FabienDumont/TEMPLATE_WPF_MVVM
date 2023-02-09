@@ -38,12 +38,13 @@ public partial class App {
 
                 // Services creation to allow ViewModels to navigate from one to another
 
-                services.AddTransient(s => new FirstVm());
-                services.AddTransient(s => new SecondVm(s.GetRequiredService<CloseModalNavigationService>()));
+                services.AddTransient(s => new FirstVm(CreateModalViewNavigationService(s)));
+                services.AddTransient(s => new SecondVm());
+                services.AddTransient(s => new ModalVm(s.GetRequiredService<CloseModalNavigationService>()));
 
                 // Nav Bar
                 services.AddTransient(
-                    s => new NavigationBarVm(CreateSecondViewNavigationService(s))
+                    s => new NavigationBarVm(CreateFirstViewNavigationService(s), CreateSecondViewNavigationService(s))
                 );
 
                 // Creation of the Main Window which can display the User Controls
@@ -77,10 +78,18 @@ public partial class App {
             serviceProvider.GetRequiredService<NavigationBarVm>
         );
     }
-
+    
     private static INavigationService CreateSecondViewNavigationService(IServiceProvider serviceProvider) {
-        return new ModalNavigationService<SecondVm>(
-            serviceProvider.GetRequiredService<ModalNavigationStore>(), serviceProvider.GetRequiredService<SecondVm>
+        // A layout is applied 
+        return new LayoutNavigationService<SecondVm>(
+            serviceProvider.GetRequiredService<NavigationStore>(), serviceProvider.GetRequiredService<SecondVm>,
+            serviceProvider.GetRequiredService<NavigationBarVm>
+        );
+    }
+
+    private static INavigationService CreateModalViewNavigationService(IServiceProvider serviceProvider) {
+        return new ModalNavigationService<ModalVm>(
+            serviceProvider.GetRequiredService<ModalNavigationStore>(), serviceProvider.GetRequiredService<ModalVm>
         );
     }
 }
