@@ -1,0 +1,25 @@
+{
+  "author": "Fabien Dumont",
+  "name": "WPF MVVM Application",
+  "description": "Un projet WPF suivant le design pattern MVVM.",
+  "identity": "FabienDumont.WPF_MVVM_APP.1.0",
+  "shortName": "consoleasync",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "sourceName": "TEMPLATE_WPF_MVVM",
+  "symbols": {
+    "Framework": {
+      "type": "parameter",
+      "description": "The target framework for the project.",
+      "datatype": "choice",
+      "choices": [
+        {
+          "choice": "net7.0"
+        }
+      ],
+      "defaultValue": "net7.0"
+    }
+  }
+}
