@@ -1,7 +1,5 @@
-/TEMPLATE_WPF_MVVM/bin/
-/TEMPLATE_WPF_MVVM/obj/
-/CustomControlLibrary/bin/
-/CustomControlLibrary/obj/
+*/bin/
+*/obj/
 .git
 .idea
 .gitignore
